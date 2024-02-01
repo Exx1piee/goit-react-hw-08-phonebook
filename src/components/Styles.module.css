@@ -1,0 +1,249 @@
+.itemContscts {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.pItemContacts {
+    margin: 0;
+    padding: 0;
+}
+
+.itemContscts::before {
+    content: '\2022';
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 48px;
+    line-height: 0.5;
+}
+
+.phonebook,
+.contacts {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 10px 10px;
+    gap: 20px;
+    width: 300px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input {
+    width: 130px;
+    font-size: 14px;
+}
+
+.button {
+    width: 90px;
+    font-size: 14px;
+}
+
+.nameInput {
+    font-size: 16px;
+}
+
+.listContacts {
+    list-style-type: disc;
+}
+
+.buttonDelete {
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.allDivHome {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.greetingHome {
+    margin-bottom: 30px;
+}
+
+.hllGreetingHome {
+    margin: 0;
+    font-size: 36px;
+}
+
+.logoNameGreetingHome {
+    font-size: 54px;
+    font-weight: 700;
+}
+
+.buttonsHome {
+    display: flex;
+    align-items: center;
+}
+
+.buttonHome {
+    min-height: 50px;
+    height: 100%;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.logoNameBtnHome {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.divRegisterForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleRegisterForm{
+    text-align: center;
+}
+
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 10px 10px;
+    gap: 50px;
+    width: 500px;
+    margin: 0;
+}
+
+.labelRegisterForm{
+    width: 100%;
+}
+
+.pRegisterForm{
+    font-size: 18px;
+}
+
+.inputRegisterForm{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.buttonLogOrReg{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.divLogInForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleLogInForm{
+    text-align: center;
+}
+
+.logInForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 10px 10px;
+    gap: 50px;
+    width: 500px;
+    margin: 0;
+}
+
+.labelLogInForm{
+    width: 100%;
+}
+
+.pLogInForm{
+    font-size: 18px;
+}
+
+.inputLogInForm{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+
+.divContFiltPageUsers{
+    margin: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}
