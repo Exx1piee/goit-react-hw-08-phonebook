@@ -1,7 +1,7 @@
 import css from '../Styles.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectUsEmail } from '../../redux/workWithBackend/selectors';
-import { logOut } from '../../redux/workWithBackend/operations';
+import { selectUsEmail } from '../../redux/BackEndProps/selectors';
+import { logOut } from '../../redux/BackEndProps/operations';
 import { Link } from 'react-router-dom';
 
 const UserMenu = () => {

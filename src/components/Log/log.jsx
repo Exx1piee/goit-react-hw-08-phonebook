@@ -1,11 +1,11 @@
-import css from './LogInForm.module.css';
+import css from '../Styles.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { logIn } from '../../redux/workWithBackend/operations';
-import { selectError } from '../../redux/workWithBackend/selectors';
+import { logIn } from '../../redux/BackEndProps/operations';
+import { selectError } from '../../redux/BackEndProps/selectors';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react';
-import { cleanError } from '../../redux/workWithBackend/slice';
+import { cleanError } from '../../redux/BackEndProps/slice';
 
 const LogInForm = () => {
     const dispatch = useDispatch();

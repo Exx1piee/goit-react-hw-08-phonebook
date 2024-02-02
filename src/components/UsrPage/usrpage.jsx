@@ -3,7 +3,7 @@ import { Filter } from 'components/Filter/filter';
 import { ContactList } from 'components/ContactList/contactlist';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import { selectToken } from '../../redux/workWithBackend/selectors';
+import { selectToken } from '../../redux/BackEndProps/selectors';
 import css from '../Styles.module.css';
 
 const UserPage = () => {

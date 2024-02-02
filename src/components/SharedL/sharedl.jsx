@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
-import { Navigation } from "../Navigation/navigation";
+import { Navigation } from "../Nav/nav";
 import css from '../Styles.module.css';
 import { useSelector } from "react-redux";
-import { selectIsLoggedIn } from "../../redux/workWithBackend/selectors";
-import UserMenu from "../UserMenu/UserMenu";
+import { selectIsLoggedIn } from "../../redux/BackEndProps/selectors";
+import UserMenu from "../UsrMenu/usrmenu";
 
 export const SharedLayout = () => {
     const isLoggedIn = useSelector(selectIsLoggedIn);
