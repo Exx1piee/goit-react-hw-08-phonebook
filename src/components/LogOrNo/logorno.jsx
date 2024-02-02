@@ -5,7 +5,7 @@ import { selectIsLoggedIn } from "../../redux/BackEndProps/selectors";
 const LogOrNo = ({ component: Component, redirectTo = '/' }) => {
     const isLoggedIn = useSelector(selectIsLoggedIn);
 
-    return isLoggedIn ? <Navigate to={redirectTo}/> : Component;
+    return isLoggedIn ? <Navigate to={redirectTo}/> : <Component />;
 };
 
 export default LogOrNo;
