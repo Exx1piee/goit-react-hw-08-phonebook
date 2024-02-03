@@ -16,7 +16,7 @@ export const App = () => {
   const dispatch = useDispatch();
 
   const bgGeneral = useSelector(selectBgGeneral)
-  const imgForBackground = bgGeneral ? bgGeneral.img : 'https://lh3.googleusercontent.com/pw/ABLVV84w_pNrNk2EMyul9WEZQIGgWoLvREgHEC97b4Mf15Ks5Hoqt7v7nc07QVJrbIMlK2LWegS0dAQKL6yuKPxHGHqTDwlQOCxOMGTWtrhzl73nYIFv9CWK4h9QUB2dvOTMfXj-twNVuqOHLhczMnZRTAvECg=w1920-h1080-s-no-gm?authuser=0';
+  const imgForBackground = bgGeneral ? bgGeneral.img : 'https://png.pngtree.com/thumb_back/fh260/background/20210915/pngtree-geometric-pattern-white-gold-minimalist-creative-background-image_879782.jpg';
 
   useEffect(() => {
     dispatch(searchForBackground());

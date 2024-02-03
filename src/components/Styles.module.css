@@ -1,3 +1,177 @@
+.divForContactList{
+    padding: 0;
+    background: transparent;
+    margin: 0;
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.listContacts{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+.listContacts::-webkit-scrollbar{
+    width: 0 !important;
+    height: 0;
+    display: none !important;
+    background: transparent;
+}
+
+.itemContact{
+    padding: 0;
+    transition: min-width 250ms cubic-bezier(0.25, 0.1, 0.25, 1), max-height 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+                font-size 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.itemContactActive{
+    font-size: 36px;
+}
+
+.firstDivItemContact{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #949494;
+    transition: min-height 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.divItemContact{
+    color: rgb(16, 16, 13);
+    text-shadow: 2px 2px 5px black;
+    background-color: rgba(255, 255, 255, 0.5);
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pItemContactsName{
+    margin: 0;
+    padding: 0;
+}
+
+.pItemContactsNumber{
+    padding: 0;
+    margin: 0;
+}
+
+.buttonDelete{
+    border: transparent 1px solid;
+    border-radius: 50%;
+    background: transparent;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./ItemContact/delete-svgrepo-com.svg#Delete');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+	cursor: pointer;
+    transition: border-color ease 0.5s, top 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+                right 250ms cubic-bezier(0.25, 0.1, 0.25, 1), width 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+                height 250ms cubic-bezier(0.25, 0.1, 0.25, 1), border-width 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.itemContactActive .buttonDelete{
+    border-width: 2px;
+}
+
+
+
+.buttonDelete:hover {
+    border-color: #d3d3d3;
+}
+
+.changeCBut{
+    border: transparent 1px solid;
+    border-radius: 50%;
+    background: transparent;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./ItemContact/pencil-svgrepo-com.svg#Layer_1');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    cursor: pointer;
+    transition: border-color ease 0.5s, top 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+                left 250ms cubic-bezier(0.25, 0.1, 0.25, 1), width 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+                height 250ms cubic-bezier(0.25, 0.1, 0.25, 1), border-width 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.itemContactActive .changeCBut{
+    border-width: 2px;
+}
+
+.changeCBut:hover {
+    border-color: #d3d3d3;
+}
+.formChangingCWindow{
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap: 20px;
+}
+
+.labelChangingCWindow{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputChangingCWindow{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 1px #000 solid;
+    padding: 0 10px;
+}
+
+.buttonsChangingCWindow{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonChangingCWindow{
+    height: 30px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d3d3d3;
+}
+
+.nameInputChangingCWindow{
+    font-size: 24px;
+}
 .modalDivContactFormActive{
     position: fixed;
     top: 0;
@@ -9,7 +183,7 @@
 }
 
 .divForMiniContactForm{
-    background-color: rgba(142, 145, 143, 0.5);
+    background-color: rgba(23, 244, 96, 0.5);
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -29,7 +203,7 @@
 .buttonAddMiniContactForm{
     border: transparent 1px solid;
     background: transparent;
-    color: yellow;
+    color: rgb(16, 16, 15);
     text-shadow: 2px 2px 5px black;
     font-size: 24px;
     display: flex;
@@ -38,7 +212,7 @@
     width: 100%;
 	height: 100%;
 	cursor: pointer;
-    transition: width 250ms cubic-bezier(0.25, 0.1, 0.25, 1), height 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+
 }
 
 
@@ -148,131 +322,6 @@
 .firstDivContactFormActive .nameInputContactForm{
     font-size: 20px;
 }
-.divForContactList{
-    padding: 0;
-    background: transparent;
-    margin: 0;
-    flex: 1;
-    margin-bottom: 15px;
-}
-
-.listContacts{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    overflow: auto;
-
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-}
-
-.listContacts::-webkit-scrollbar{
-    width: 0 !important;
-    height: 0;
-    display: none !important;
-    background: transparent;
-}
-
-.itemContact{
-    padding: 0;
-    transition: min-width 250ms cubic-bezier(0.25, 0.1, 0.25, 1), max-height 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
-                font-size 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.itemContactActive{
-    font-size: 36px;
-}
-
-.firstDivItemContact{
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #949494;
-    transition: min-height 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.divItemContact{
-    color: yellow;
-    text-shadow: 2px 2px 5px black;
-    background-color: rgba(255, 255, 255, 0.5);
-    min-width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.pItemContactsName{
-    margin: 0;
-    padding: 0;
-}
-
-.pItemContactsNumber{
-    padding: 0;
-    margin: 0;
-}
-
-.buttonDelete{
-    border: transparent 1px solid;
-    border-radius: 50%;
-    background: transparent;
-    color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('./ItemContact/delete-svgrepo-com.svg#Delete');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-	cursor: pointer;
-    transition: border-color ease 0.5s, top 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
-                right 250ms cubic-bezier(0.25, 0.1, 0.25, 1), width 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
-                height 250ms cubic-bezier(0.25, 0.1, 0.25, 1), border-width 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.itemContactActive .buttonDelete{
-    border-width: 2px;
-}
-
-
-
-.buttonDelete:hover {
-    border-color: #d3d3d3;
-}
-
-.changeCBut{
-    border: transparent 1px solid;
-    border-radius: 50%;
-    background: transparent;
-    color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('./ItemContact/pencil-svgrepo-com.svg#Layer_1');
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    cursor: pointer;
-    transition: border-color ease 0.5s, top 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
-                left 250ms cubic-bezier(0.25, 0.1, 0.25, 1), width 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
-                height 250ms cubic-bezier(0.25, 0.1, 0.25, 1), border-width 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.itemContactActive .changeCBut{
-    border-width: 2px;
-}
-
-.changeCBut:hover {
-    border-color: #d3d3d3;
-}
 .labelFilter{
     max-width: 600px;
     width: 100%;
@@ -291,6 +340,48 @@
 
 .inputFilter::placeholder{
     font-size: 18px;
+}
+.allDivHome{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.greetingHome{
+    margin-bottom: 30px;
+}
+
+.hllGreetingHome{
+    margin: 0;
+    font-size: 36px;
+}
+
+.logoNameGreetingHome{
+    font-size: 54px;
+    font-weight: 700;
+}
+
+.buttonsHome{
+    display: flex;
+    align-items: center;
+}
+
+.buttonHome{
+    min-height: 50px;
+    height: 100%;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.logoNameBtnHome{
+    font-size: 14px;
+    font-weight: 700;
 }
 .divLogInForm{
     width: 100%;

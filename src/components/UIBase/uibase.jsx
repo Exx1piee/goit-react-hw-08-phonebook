@@ -108,14 +108,12 @@ export const UlForCL = () => {
                     autoScroll(item, conditionForAutoSc);
                 }
         };
-
         return () => {
             if(listContactsRef){
                 listContactsRef.removeEventListener('scroll', forScroll);
             }
         }
     }, [contacts, listContHasEL, listContactsRef]);
-
     return(
         <ul ref={listContacts} className={[css.listContacts, 'listContactsForGap'].join(' ')}>
             {contacts.length !== 0 &&

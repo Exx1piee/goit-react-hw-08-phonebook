@@ -12,7 +12,7 @@ const RegisterForm = () => {
     const error = useSelector(selectError);
 
     useEffect(() => {
-        if(Number(error) === 400){toast.error('Invalid data')};
+        if(Number(error) === 400){toast.error('Invalid registration data')};
         dispatch(cleanError());
     }, [error, dispatch]);
 
@@ -26,35 +26,35 @@ const RegisterForm = () => {
 
     return(
         <div className={css.divRegisterForm}>
-            <h2 className={css.titleRegisterForm}>Please, sign up in Phonebook 🤳</h2>
+            <h2 className={css.titleRegisterForm}>Registration in your Phonebook</h2>
             <form className={css.registerForm} onSubmit={handleSubmit}>
                 <label className={css.labelRegisterForm}>
                     <span className={css.pRegisterForm}>Name</span>
                 <input className={css.inputRegisterForm} 
-                name='Name'
+                name='name'
                 type="text"
                 autoFocus
-                placeholder="Please, enter your real name" />
+                placeholder="Please, enter your name" />
                 </label>
                 <label className={css.labelRegisterForm}>
                     <span className={css.pRegisterForm}>Email</span>
                 <input className={css.inputRegisterForm} 
-                name='Email'
+                name='email'
                 type="email"
                 autoComplete="off"
                 autoFocus
-                placeholder="Please, enter your valid email" />
+                placeholder="Please, enter your email" />
                 </label>
                 <label className={css.labelRegisterForm}>
                     <span className={css.pRegisterForm}>Password</span>
                 <input className={css.inputRegisterForm} 
-                name='Password'
+                name='password'
                 type="password"
                 autoComplete="off"
                 autoFocus
                 placeholder="The password must consist of at least 7 characters" />
                 </label>
-                <button className={css.buttonLogOrReg} type="submit">Sign up</button>
+                <button className={css.buttonRegisterForm} type="submit">Registration</button>
             </form>
             <ToastContainer />
             </div>
