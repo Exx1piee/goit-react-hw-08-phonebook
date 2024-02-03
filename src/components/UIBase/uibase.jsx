@@ -119,15 +119,16 @@ export const UlForCL = () => {
             {contacts.length !== 0 &&
                 contacts.map((contact) => { 
                     return(
-                    <li key={contact.id} id={contact.id} className={[css.itemContact, 'itemContact'].join(' ')}>
-                    <ItemContact 
+                  
+                    <ItemContact  
+                    key={contact.id} id={contact.id} className={[css.itemContact, 'itemContact'].join(' ')}
                         contact={contact}
                         index={contacts.indexOf(contact)}
-                        id={contact.id}
+                       
                         activeId={activeId}
                         actualScroll={actualScroll}
                     />
-                    </li>
+                    
                 )})
             }
         </ul>

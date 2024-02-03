@@ -1,6 +1,6 @@
-import React, { lazy }  from "react";
+import React, { lazy } from "react";
 import { useEffect } from "react";
-import { Route, BrowserRouter as Router, Navigate , Routes} from "react-router-dom";
+import { Route, BrowserRouter as Router, Navigate, Routes } from "react-router-dom";
 import { SharedLayout } from "./SharedL/sharedl";
 import { useDispatch, useSelector } from "react-redux";
 import { searchForBackground } from "../redux/searchForStyles.jsx";
@@ -26,8 +26,8 @@ export const App = () => {
       style={{
         background: '#202020',
         backgroundImage: `url(${imgForBackground})`,
-        backgroundSize: 'cover', 
-        backgroundPosition: 'center', 
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         height: '100%',
         display: 'flex',
         fontSize: 20,
@@ -43,19 +43,19 @@ export const App = () => {
       }}>
         <Router>
           <Routes>
-            <Route path="/" element={<SharedLayout/>}>
-              <Route index element={<MainPage/>}/>
+            <Route path="/" element={<SharedLayout />}>
+              <Route index element={<MainPage />} />
               <Route path="/register" element={
-                <LogOrNo redirectTo='/contacts' component={RegisterForm}/>
-              }/>
+                <LogOrNo redirectTo='/contacts' component={RegisterForm} />
+              } />
               <Route path="/login" element={
-                <LogOrNo redirectTo='/contacts' component={LogInForm}/>
-              }/>
+                <LogOrNo redirectTo='/contacts' component={LogInForm} />
+              } />
               <Route path="/contacts" element={
-                <NotLogOrYes component={PageUsers}/>
-              }/>
+                <NotLogOrYes component={PageUsers} />
+              } />
             </Route>
-            <Route path="*" element={<Navigate to="/" />} /> 
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Router>
       </div>
