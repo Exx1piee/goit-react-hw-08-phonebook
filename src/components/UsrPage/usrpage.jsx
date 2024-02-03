@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { selectToken } from '../../redux/BackEndProps/selectors';
 import css from '../Styles.module.css';
 
-const UserPage = () => {
+const PageUsers = () => {
     const token = useSelector(selectToken);
     if (token) {
         axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -22,4 +22,4 @@ const UserPage = () => {
     )
 };
 
-export default UserPage;
+export default PageUsers;

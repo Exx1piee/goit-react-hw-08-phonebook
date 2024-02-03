@@ -2,7 +2,6 @@ import css from '../Styles.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from '../../redux/selectors';
 import { setFilter } from '../../redux/filterSlice';
-
 export const Filter = () => {
     const filterWithState = useSelector(selectFilter);
     const dispatch = useDispatch();
@@ -14,17 +13,15 @@ export const Filter = () => {
     };
 
         return(
-            <>
-                <label className={css.label}>
-                <span className={css.nameInput}>Find contacts by name</span>
+            <label className={css.labelFilter}>
                 <input 
                 value={filterWithState}
-                className={css.input} 
+                className={css.inputFilter} 
                 type="text" 
                 name="filter" 
+                placeholder='Please start typing the desired name'
                 onChange={updateStateForFilter}
                 />
             </label>
-            </>
         )
 }

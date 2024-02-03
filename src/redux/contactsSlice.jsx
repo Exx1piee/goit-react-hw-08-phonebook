@@ -1,8 +1,9 @@
 import { createSlice} from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact } from "./operations";
+import { fetchContacts, addContact, deleteContact, patchContact } from "./operations";
 
 const contactsInitialState = {
     items: [],
+    scrollLeftLists: 0,
     isLoading: false,
     error: null
     };
@@ -16,6 +17,9 @@ const forRejected = (state, action) => {
 const contactsSlice = createSlice({
     name: 'contacts',
     initialState: contactsInitialState,
+    reducers:{
+        setScrollLeftLists(state, action){state.scrollLeftLists = action.payload}
+    },
     extraReducers: builder => {
         builder
         .addCase(fetchContacts.pending, forPending)
@@ -40,7 +44,16 @@ const contactsSlice = createSlice({
             state.items.splice(index, 1);
         })
         .addCase(deleteContact.rejected, forRejected)
+        .addCase(patchContact.pending, forPending)
+        .addCase(patchContact.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.error = null;
+            const index = state.items.findIndex(contact => contact.id === action.payload.id);
+            state.items.splice(index, 1, action.payload);
+        })
+        .addCase(patchContact.rejected, forRejected)
     }
 });
 
 export const contactsReducer = contactsSlice.reducer;
+export const {setScrollLeftLists} = contactsSlice.actions;
