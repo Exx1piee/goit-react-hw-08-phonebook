@@ -1,16 +1,18 @@
-import React, { lazy } from "react";
-import { useEffect } from "react";
-import { Route, BrowserRouter as Router, Navigate, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
+import { lazy } from "react";
 import { SharedLayout } from "./SharedL/sharedl";
 import { useDispatch, useSelector } from "react-redux";
-import { searchForBackground } from "../redux/searchForStyles.jsx";
+import { searchForBackground } from "../redux/searchForStyles";
 import { selectBgGeneral } from "../redux/selectors";
-const MainPage = lazy(() => import('./MainPage/mainpage.jsx'));
+
+const Home = lazy(() => import('./MainPage/mainpage'))
 const RegisterForm = lazy(() => import("./Reg/reg"));
-const PageUsers = lazy(() => import('./UsrPage/usrpage'));
-const LogOrNo = lazy(() => import('./LogOrNo/logorno'));
-const NotLogOrYes = lazy(() => import('./NotLogOrYes/notlogoryes'));
-const LogInForm = lazy(() => import('./Log/log'));
+const PageUsers = lazy(() => import('./PageUsers/pageusers'));
+const LoggedInOrNot = lazy(() => import('./LogOrNo/logorno'));
+const NotLoggedOrY = lazy(() => import('./NotLogOrYes/notlogoryes'));
+const LogInForm = lazy(() => import('./LogInForm/loginform'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -21,44 +23,44 @@ export const App = () => {
   useEffect(() => {
     dispatch(searchForBackground());
   }, [dispatch]);
-  return (
-    <div
-      style={{
-        background: '#202020',
-        backgroundImage: `url(${imgForBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100%',
-        display: 'flex',
-        fontSize: 20,
-        color: '#fff',
-        margin: 0,
-        padding: 0
-      }}
-    >
-      <div style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: "column"
-      }}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<SharedLayout />}>
-              <Route index element={<MainPage />} />
-              <Route path="/register" element={
-                <LogOrNo redirectTo='/contacts' component={RegisterForm} />
-              } />
-              <Route path="/login" element={
-                <LogOrNo redirectTo='/contacts' component={LogInForm} />
-              } />
-              <Route path="/contacts" element={
-                <NotLogOrYes component={PageUsers} />
-              } />
-            </Route>
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </Router>
-      </div>
+
+  <Router>
+  <div
+    style={{
+      background: '#202020',
+      backgroundImage: `url(${imgForBackground})`,
+      backgroundSize: 'cover', 
+      backgroundPosition: 'center', 
+      height: '100%',
+      display: 'flex',
+      fontSize: 20,
+      color: '#fff',
+      margin: 0,
+      padding: 0
+    }}
+  >
+    <div style={{
+      width: '100%',
+      display: 'flex',
+      flexDirection: "column"
+    }}>
+      <Routes>
+        <Route path="/" element={<SharedLayout/>}>
+          <Route index element={<Home/>}/>
+          <Route path="/register" element={
+            <LoggedInOrNot redirectTo='/contacts' component={<RegisterForm/>}/>
+          }/>
+          <Route path="/login" element={
+            <LoggedInOrNot redirectTo='/contacts' component={<LogInForm/>}/>
+          }/>
+          <Route path="/contacts" element={
+            <NotLoggedOrY component={<PageUsers/>}/>
+          }/>
+        </Route>
+        <Route path="*" element={<Navigate to="/" />} /> 
+      </Routes>
     </div>
-  )
+  </div>
+</Router>
+  
 };

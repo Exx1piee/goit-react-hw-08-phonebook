@@ -1,5 +1,5 @@
 import { addContact } from '../../redux/operations';
-import css from '../Styles.module.css';
+import css from './contactform.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/selectors';
 

@@ -1,4 +1,4 @@
-import css from '../Styles.module.css';
+import css from './usrmenu.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUsEmail } from '../../redux/BackEndProps/selectors';
 import { logOut } from '../../redux/BackEndProps/operations';

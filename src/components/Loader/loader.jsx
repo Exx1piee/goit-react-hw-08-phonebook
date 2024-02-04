@@ -18,8 +18,8 @@ left: 50%;
 const RollerContainer = styled.div`
   display: inline-block;
   position: relative;
-  width: 1200px;
-  height: 1200px;
+  width: 80px;
+  height: 80px;
 `;
 
 const RollerDiv = styled.div`

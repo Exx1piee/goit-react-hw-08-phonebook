@@ -1,11 +1,12 @@
 import css from '../Styles.module.css';
+import { UlForCL } from '../UIBase/uibase';
+import { selectIsLoading, selectError, selectNumbsForImg, selectBackgrounds } from '../../redux/selectors';
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/operations";
 import { useDispatch, useSelector } from "react-redux";
 import { Loader } from "../Loader/loader";
 import { createNumbs } from '../../redux/backgroundImgSlice';
-import { UlForCL } from 'components/UIBase/uibase';
-import { selectIsLoading, selectError, selectNumbsForImg, selectBackgrounds } from '../../redux/selectors';
+
 export const ContactList = () => {
     const realScreenWidth = window.innerWidth;
     

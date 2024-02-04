@@ -1,8 +1,9 @@
-import css from '../Styles.module.css'
+import css from './mainpage.module.css'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/BackEndProps/selectors';
-const MainPage = () => {
+
+const Home = () => {
     const isLoggedIn = useSelector(selectIsLoggedIn);
     return(
         <div className={css.allDivHome}>
@@ -30,4 +31,4 @@ const MainPage = () => {
     )
 };
 
-export default MainPage;
+export default Home;

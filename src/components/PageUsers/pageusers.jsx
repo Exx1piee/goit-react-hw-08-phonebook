@@ -4,7 +4,7 @@ import { ContactList } from 'components/ContactList/contactlist';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { selectToken } from '../../redux/BackEndProps/selectors';
-import css from '../Styles.module.css';
+import css from './pageusers.module.css';
 
 const PageUsers = () => {
     const token = useSelector(selectToken);

@@ -1,4 +1,4 @@
-import css from '../Styles.module.css';
+import css from './ChangingCWindow.module.css';
 import { useDispatch } from 'react-redux';
 import { patchContact } from '../../redux/operations';
 import { setScrollLeftLists } from '../../redux/contactsSlice';

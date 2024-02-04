@@ -1,4 +1,4 @@
-import css from '../Styles.module.css';
+import css from './reg.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../redux/BackEndProps/operations';
 import { selectError } from '../../redux/BackEndProps/selectors';

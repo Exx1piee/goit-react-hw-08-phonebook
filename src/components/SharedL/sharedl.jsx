@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import { Navigation } from "../Nav/nav";
-import css from '../Styles.module.css';
+import css from './sharedl.module.css';
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/BackEndProps/selectors";
 import UserMenu from "../UsrMenu/usrmenu";
