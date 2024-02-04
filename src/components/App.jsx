@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { lazy } from "react";
 import { SharedLayout } from "./SharedL/sharedl";
