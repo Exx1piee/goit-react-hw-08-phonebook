@@ -24,43 +24,41 @@ export const App = () => {
     dispatch(searchForBackground());
   }, [dispatch]);
 
-  <Router>
-  <div
-    style={{
-      background: '#202020',
-      backgroundImage: `url(${imgForBackground})`,
-      backgroundSize: 'cover', 
-      backgroundPosition: 'center', 
-      height: '100%',
-      display: 'flex',
-      fontSize: 20,
-      color: '#fff',
-      margin: 0,
-      padding: 0
-    }}
-  >
-    <div style={{
-      width: '100%',
-      display: 'flex',
-      flexDirection: "column"
-    }}>
-      <Routes>
-        <Route path="/" element={<SharedLayout/>}>
-          <Route index element={<Home/>}/>
-          <Route path="/register" element={
-            <LoggedInOrNot redirectTo='/contacts' component={<RegisterForm/>}/>
-          }/>
-          <Route path="/login" element={
-            <LoggedInOrNot redirectTo='/contacts' component={<LogInForm/>}/>
-          }/>
-          <Route path="/contacts" element={
-            <NotLoggedOrY component={<PageUsers/>}/>
-          }/>
-        </Route>
-        <Route path="*" element={<Navigate to="/" />} /> 
-      </Routes>
+  return (
+    <div
+      style={{
+        background: '#202020',
+        backgroundImage: `url(${imgForBackground})`,
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center', 
+        height: '100%',
+        display: 'flex',
+        fontSize: 20,
+        color: '#fff',
+        margin: 0,
+        padding: 0
+      }}
+    >
+      <div style={{
+        width: '100%',
+        display: 'flex',
+        flexDirection: "column"
+      }}>
+  <Routes>
+    <Route path="/" element={<SharedLayout/>}>
+    <Route index element={<Home/>}/>
+    <Route path="/register" element={
+      <LoggedInOrNot redirectTo='/contacts' component={<RegisterForm/>}/>
+    }/>
+    <Route path="/login" element={
+      <LoggedInOrNot redirectTo='/contacts' component={<LogInForm/>}/>
+    }/>
+    <Route path="/contacts" element={
+      <NotLoggedOrY component={<PageUsers/>}/>
+    }/>
+  </Route>
+  <Route path="*" element={<Navigate to="/" />} /> 
+  </Routes>
+</div>
     </div>
-  </div>
-</Router>
-  
-};
+  )}
