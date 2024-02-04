@@ -54,8 +54,8 @@ const RegisterForm = () => {
                         autoFocus
                         placeholder="The password must consist of at least 7 characters" />
                 </label>
-                <button className={css.buttonRegisterForm} type="submit">Registration
-                    🖱</button>
+                <button className={css.buttonRegisterForm} type="submit">Sign up 🔑
+                </button>
             </form>
             <ToastContainer />
         </div>

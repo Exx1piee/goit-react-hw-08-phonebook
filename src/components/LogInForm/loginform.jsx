@@ -45,7 +45,7 @@ const LogInForm = () => {
                 autoFocus
                 placeholder="The password must consist of at least 7 characters" />
                 </label>
-                <button className={css.buttonLogInForm} type="submit">Sign in 🖱 </button>
+                <button className={css.buttonLogInForm} type="submit">Sign in 🔑 </button>
             </form>
             <ToastContainer />
             </div>

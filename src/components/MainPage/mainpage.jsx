@@ -13,16 +13,16 @@ const Home = () => {
         <div className={css.buttonsHome}>
         {isLoggedIn ? (
             <Link to={'/contacts'}>
-                <button className={css.buttonHome}>Log In in <span className={css.logoNameBtnHome}>MyPhoneBook</span></button>
+                <button className={css.buttonHome}>Sign  in <span className={css.logoNameBtnHome}>MyPhoneBook   </span></button>
             </Link>
         ) : (
             <>
             <Link to={'/login'}>
-            <button className={css.buttonHome}>I have <span className={css.logoNameBtnHome}>MyPhoneBook</span></button>
+            <button className={css.buttonHome}>I have <span className={css.logoNameBtnHome}>MyPhoneBook    (sign in)  </span></button>
             </Link>
             <Link to={'/register'}>
             <button className={css.buttonHome}>I haven't <span className={css.logoNameBtnHome}>MyPhoneBook</span>, 
-            <br/>but I want will have that</button>
+            <br/>but I want will have that <span className={css.logoNameBtnHome}>sign up</span></button>
             </Link>
             </>
         )}
