@@ -20,7 +20,7 @@ export const Filter = () => {
                 className={css.inputFilter} 
                 type="text" 
                 name="filter" 
-                placeholder='Please start typing the desired name'
+                placeholder='Type name that you wanna find!! 🔎'
                 onChange={updateStateForFilter}
                 />
             </label>

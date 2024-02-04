@@ -18,7 +18,7 @@ export const App = () => {
   const dispatch = useDispatch();
 
   const bgGeneral = useSelector(selectBgGeneral)
-  const imgForBackground = bgGeneral ? bgGeneral.img : 'https://lh3.googleusercontent.com/pw/ABLVV84w_pNrNk2EMyul9WEZQIGgWoLvREgHEC97b4Mf15Ks5Hoqt7v7nc07QVJrbIMlK2LWegS0dAQKL6yuKPxHGHqTDwlQOCxOMGTWtrhzl73nYIFv9CWK4h9QUB2dvOTMfXj-twNVuqOHLhczMnZRTAvECg=w1920-h1080-s-no-gm?authuser=0';
+  const imgForBackground = bgGeneral ? bgGeneral.img : 'https://wallpapers.com/images/hd/plain-black-background-02fh7564l8qq4m6d.jpg';
 
   useEffect(() => {
     dispatch(searchForBackground());

@@ -45,7 +45,7 @@
 }
 
 .divItemContact{
-    color: yellow;
+    color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     background-color: rgba(255, 255, 255, 0.5);
     min-width: 100%;

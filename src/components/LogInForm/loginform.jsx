@@ -25,10 +25,10 @@ const LogInForm = () => {
 
     return(
         <div className={css.divLogInForm}>
-            <h2 className={css.titleLogInForm}>Log In in your Phonebook</h2>
+            <h2 className={css.titleLogInForm}>Please , sign in your Phonebook!  </h2>
             <form className={css.logInForm} onSubmit={handleSubmit}>
                 <label className={css.labelLogInForm}>
-                    <span className={css.pRegLogInForm}>Email</span>
+                    <span className={css.pRegLogInForm}>Email 📪</span>
                 <input className={css.inputLogInForm} 
                 name='email'
                 type="email"
@@ -37,7 +37,7 @@ const LogInForm = () => {
                 placeholder="Please, enter your email" />
                 </label>
                 <label className={css.labelLogInForm}>
-                    <span className={css.pLogInForm}>Password</span>
+                    <span className={css.pLogInForm}>Password 📫</span>
                 <input className={css.inputLogInForm} 
                 name='password'
                 type="password"
@@ -45,7 +45,7 @@ const LogInForm = () => {
                 autoFocus
                 placeholder="The password must consist of at least 7 characters" />
                 </label>
-                <button className={css.buttonLogInForm} type="submit">Log In</button>
+                <button className={css.buttonLogInForm} type="submit">Sign in 🖱 </button>
             </form>
             <ToastContainer />
             </div>

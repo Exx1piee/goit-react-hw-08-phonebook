@@ -81,14 +81,14 @@ export const ContactForm = () => {
 
                 <form className={css.formContactForm} onSubmit={updateStateForAdd}>
             <label className={css.labelContactForm}>
-                <span className={css.nameInputContactForm}>Enter Name!</span>
+                <span className={css.nameInputContactForm}>Enter Name! 👨🏼‍🦲</span>
             <input className={[css.inputContactForm,'inputNameAdd', 'inputsAdd'].join(' ')} type="text" name="name" required/>
             </label>
             <label className={css.labelContactForm}>
-                <span className={css.nameInputContactForm}>Enter Phone Number!</span>
+                <span className={css.nameInputContactForm}>Enter Phone Number! 📱</span>
                 <input className={[css.inputContactForm, 'inputsAdd'].join(' ')} type="tel" name="number" required />
             </label>
-            <button className={css.buttonContactForm} type="submit">Add contact</button>
+            <button className={css.buttonContactForm} type="submit">Add contact 📡</button>
         </form>
                 </div>
         </div>
