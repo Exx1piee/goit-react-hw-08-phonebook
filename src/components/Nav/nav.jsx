@@ -6,7 +6,7 @@ export const Navigation = () => {
         <div className={css.divNavigation}>
             <nav className={css.navNavigation}>
             <Link to={'/'} className={css.aNavigation}>
-                <p className={css.pNavigation}>Home</p>
+                <p className={css.pNavigation}>Main Page🏠</p>
             </Link>
             </nav>
         </div>

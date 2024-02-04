@@ -21,8 +21,8 @@ const Home = () => {
             <button className={css.buttonHome}>I have <span className={css.logoNameBtnHome}>MyPhoneBook    (sign in)  </span></button>
             </Link>
             <Link to={'/register'}>
-            <button className={css.buttonHome}>I haven't <span className={css.logoNameBtnHome}>MyPhoneBook</span>, 
-            <br/>but I want will have that <span className={css.logoNameBtnHome}>sign up</span></button>
+            <button className={css.buttonHome}>I dont have <span className={css.logoNameBtnHome}>MyPhoneBook</span>, 
+            <br/>but I want  <span className={css.logoNameBtnHome}>sign up</span></button>
             </Link>
             </>
         )}
